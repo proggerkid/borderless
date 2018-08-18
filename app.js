@@ -13,6 +13,8 @@ let handleLogin = require('./handler/handleLogin');
 let handleProfile = require('./handler/handleProfile');
 let handleSharing = require('./handler/handleSharing');
 
+let port = process.env.PORT || 8000;
+
 //database//
 handleDatabase.connect(mongoose);
 let User = handleDatabase.makeUserModel(mongoose);
@@ -43,4 +45,6 @@ handleSharing(app);
 
 
 //start http-server//
-httpServer.listen(8000);
+httpServer.listen(PORT, function(){
+	consol.log("app running");
+});
