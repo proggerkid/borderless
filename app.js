@@ -13,7 +13,7 @@ let handleLogin = require('./handler/handleLogin');
 let handleProfile = require('./handler/handleProfile');
 let handleSharing = require('./handler/handleSharing');
 
-let port = process.env.PORT || 8000;
+let PORT = process.env.PORT || 8000;
 
 //database//
 handleDatabase.connect(mongoose);
