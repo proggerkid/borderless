@@ -46,5 +46,5 @@ handleSharing(app);
 
 //start http-server//
 httpServer.listen(PORT, function(){
-	consol.log("app running");
+	console.log("app running");
 });
