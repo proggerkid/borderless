@@ -37,7 +37,8 @@ module.exports = function(app){
 					res.render('index');
 				}
 				else{
-					res.render('sharing');
+					var fileNames = fs.readdirSync('./upload');
+					res.render('sharing', {links: fileNames});
 				}
 			})
 		}
