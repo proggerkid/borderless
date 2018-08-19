@@ -12,9 +12,18 @@ module.exports = function(app){
 		}
 	});
 
-	app.get('/download', function(req, res){
-		console.log(req.url);
-		res.render('sharing', {links: []});
+	app.get('/download/:dl', function(req, res){
+		let dlLink = req.params.dl;
+
+		fs.readFile('upload/'+dlLink, function(err, data){
+			if(err){
+
+			}
+			else{
+				console.log(__dirname+'/upload/'+dlLink);
+				res.send(data);
+			}
+		});
 	});
 
 	app.post('/shareUpload', function(req, res){
