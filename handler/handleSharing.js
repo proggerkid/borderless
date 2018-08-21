@@ -20,7 +20,6 @@ module.exports = function(app){
 
 			}
 			else{
-				console.log(__dirname+'/upload/'+dlLink);
 				res.send(data);
 			}
 		});

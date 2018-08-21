@@ -6,5 +6,5 @@ for(let i=0; i<li_dlLinks.length; i++){
 
 	li_dlLinks[i].innerHTML = "<a href='/download/" +tmp_dlLink+ "' download>" + tmp_dlLink + "</a>";
 
-	console.log(li_dlLinks[i]);
 }
+
